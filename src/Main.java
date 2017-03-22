@@ -116,13 +116,45 @@ public class Main {
         return false;
     }
 
+    public static int countXX(String str){
+        int count = 0;
+        for(int i = 0;i < str.length() - 1;i++){
+            if(str.charAt(i) == 'x' && str.charAt(i + 1) == 'x')
+                count ++;
+        }
+        return count;
+    }
+
+    public static String splosion(String str){
+        String newLine;
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0, j = 1;j < str.length() + 1;){
+            builder.append(str.substring(i,i+j));
+            j++;
+        }
+        newLine = builder.toString();
+        return newLine;
+    }
+
+    public static boolean arrayFront(int[] nums){
+        boolean answer = false;
+        if(nums.length >= 4) {
+            for (int i = 0; i < 4; i++) {
+                if (nums[i] == 9)
+                    answer = true;
+            }
+        }
+                else answer = false;
+        return answer;
+    }
+
 
     public static void main(String[] args){
 //        last3LettersToUpperCase("hambal");
 //        stringTimes("Hi",3);
 //        System.out.println(doubleX("hxxaxy"));
 //        System.out.println(last2("xaxxxaxaxx"));
-//        int[] array = {1,9,2,7,6,1};
+//        int[] array = {1,2,7,6,1};
 //        System.out.println(array123(array));
 //        System.out.println(altPairs("CodingHorror"));
 //        System.out.println(noTriples(array));
@@ -131,6 +163,9 @@ public class Main {
 //        System.out.println(stringMatch("xxcaazz", "xxbaaza"));
 //        System.out.println(stringYak("bayakrev"));
 //        System.out.println(has271(array));
+//        System.out.println(countXX("Baxxxrexv"));
+//        System.out.println(splosion("Aziz"));
+//        System.out.println(arrayFront(array));
 
 
 
