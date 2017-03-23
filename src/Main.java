@@ -148,13 +148,32 @@ public class Main {
         return answer;
     }
 
+    public static String stringX(String str){
+        String newLine;
+        StringBuilder builder = new StringBuilder();
+        newLine = str.substring(1,str.length() - 1);
+        newLine = newLine.replace("x","");
+        builder.append(str.charAt(0)).append(newLine).append(str.charAt(str.length() - 1));
+        newLine = builder.toString();
+        return newLine;
+    }
+
+    public static int array667(int[] nums){
+        int count = 0;
+        for(int i = 0;i < nums.length - 1;i++){
+            if((nums[i] == 6) && (nums[i + 1] == 6 || nums[i + 1] == 7))
+                count ++;
+        }
+        return count;
+    }
+
 
     public static void main(String[] args){
 //        last3LettersToUpperCase("hambal");
 //        stringTimes("Hi",3);
 //        System.out.println(doubleX("hxxaxy"));
 //        System.out.println(last2("xaxxxaxaxx"));
-//        int[] array = {1,2,7,6,1};
+//        int[] array = {1,2,7,6,6,7};
 //        System.out.println(array123(array));
 //        System.out.println(altPairs("CodingHorror"));
 //        System.out.println(noTriples(array));
@@ -166,6 +185,8 @@ public class Main {
 //        System.out.println(countXX("Baxxxrexv"));
 //        System.out.println(splosion("Aziz"));
 //        System.out.println(arrayFront(array));
+//        System.out.println(stringX("xBarexv"));
+//        System.out.println(array667(array));
 
 
 
